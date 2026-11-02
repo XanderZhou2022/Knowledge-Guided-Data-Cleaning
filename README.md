@@ -14,7 +14,7 @@ A survey connecting knowledge acquisition with supported data repairs, reliabili
 
 ## Website
 
-The static website includes an interactive running example, a searchable index of all 30 studies, take-home messages, and links to the paper and presentation. It runs without a build step or external dependencies.
+The static website includes an interactive running example, a searchable index of all 30 studies, take-home messages, and links to the paper and presentation. It runs without a build step or external dependencies. Comic Relief webfonts are served locally so the typography also works on iPhone Safari; their SIL Open Font License is included in `assets/fonts/`.
 
 Preview locally:
 

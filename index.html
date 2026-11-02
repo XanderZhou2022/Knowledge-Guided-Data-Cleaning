@@ -10,15 +10,16 @@
   <meta property="og:type" content="website">
   <title>Knowledge-Guided Data Cleaning · Yixi Zhou</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="preload" href="assets/fonts/comic-relief-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261102-fonts1">
+  <script src="script.js?v=20261102-fonts1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="#" aria-label="Knowledge-Guided Data Cleaning home"><span class="brand-mark" aria-hidden="true">K<span>·</span></span><span>Knowledge &amp; Data</span></a>
     <nav aria-label="Main navigation">
-      <a href="#overview">The survey</a><a href="#literature">Literature</a><a href="#take-home">Take home</a><a href="#materials">Materials <span aria-hidden="true">↗</span></a>
+      <a href="#overview">The survey</a><a href="#literature">Literature</a><a href="#take-home">Take home</a><a href="#materials">Materials <span aria-hidden="true">↗︎</span></a>
     </nav>
   </header>
   <main id="main">
@@ -28,7 +29,7 @@
         <h1 id="hero-title">Knowledge-Guided<br><span>Data Cleaning</span></h1>
         <p class="hero-subtitle">From knowledge acquisition<br>to reliable decisions</p>
         <p class="hero-description">What evidence supports a change to your data? Thirty studies connect the knowledge we acquire with the decisions we can trust.</p>
-        <div class="hero-actions"><a class="button button-dark" href="paper.pdf" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a><a class="text-link" href="slides.pdf" target="_blank" rel="noopener">View the slides <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button button-dark" href="paper.pdf" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗︎</span></a><a class="text-link" href="slides.pdf" target="_blank" rel="noopener">View the slides <span aria-hidden="true">↗︎</span></a></div>
         <p class="byline"><strong>Yixi Zhou</strong><span>Hong Kong Baptist University</span></p>
       </div>
       <div class="hero-example" aria-label="Interactive illustrative data-cleaning example">
@@ -51,10 +52,10 @@
       <div class="section-caption"><span>01</span><p>The central question</p></div>
       <div class="overview-intro"><h2 id="overview-title">Detecting a conflict is only<br><em>the beginning.</em></h2><div class="overview-prose"><p>A rule can expose an inconsistency. Choosing a correction requires something more: evidence that applies to the right record, attribute and task.</p><p>This survey follows that connection from knowledge acquisition to repair selection, then into multi-step data preparation. It distinguishes factual correctness, constraint consistency and downstream task utility.</p></div></div>
       <div class="reading-path">
-        <a href="#literature" data-jump-category="acquisition"><span class="path-index">01</span><h3>Acquire knowledge</h3><p>Where do rules, facts, patterns and feedback come from?</p><span class="path-arrow" aria-hidden="true">↗</span></a>
-        <a href="#literature" data-jump-category="repair"><span class="path-index">02</span><h3>Choose a repair</h3><p>How does evidence become a specific decision?</p><span class="path-arrow" aria-hidden="true">↗</span></a>
-        <a href="#literature" data-jump-category="reliability"><span class="path-index">03</span><h3>Establish reliability</h3><p>When should a system change, revise or abstain?</p><span class="path-arrow" aria-hidden="true">↗</span></a>
-        <a href="#literature" data-jump-category="preparation"><span class="path-index">04</span><h3>Prepare for a task</h3><p>How do meanings and operation order shape the result?</p><span class="path-arrow" aria-hidden="true">↗</span></a>
+        <a href="#literature" data-jump-category="acquisition"><span class="path-index">01</span><h3>Acquire knowledge</h3><p>Where do rules, facts, patterns and feedback come from?</p><span class="path-arrow" aria-hidden="true">↗︎</span></a>
+        <a href="#literature" data-jump-category="repair"><span class="path-index">02</span><h3>Choose a repair</h3><p>How does evidence become a specific decision?</p><span class="path-arrow" aria-hidden="true">↗︎</span></a>
+        <a href="#literature" data-jump-category="reliability"><span class="path-index">03</span><h3>Establish reliability</h3><p>When should a system change, revise or abstain?</p><span class="path-arrow" aria-hidden="true">↗︎</span></a>
+        <a href="#literature" data-jump-category="preparation"><span class="path-index">04</span><h3>Prepare for a task</h3><p>How do meanings and operation order shape the result?</p><span class="path-arrow" aria-hidden="true">↗︎</span></a>
       </div>
       <blockquote><p>“What were our actual sales<br>by month and city last year?”</p><div><span class="quote-label">A simple request, a richer problem</span><p>Correct values are part of the answer. The workflow also needs to interpret “actual sales,” subtract refunds and coordinate transformations with joins.</p></div></blockquote>
     </section>
@@ -72,10 +73,10 @@
     <section class="take-home" id="take-home" aria-labelledby="take-home-title"><div class="section-shell take-home-layout"><div class="take-home-heading"><div class="section-caption"><span>03</span><p>Take home</p></div><h2 id="take-home-title">Keep what works.<br><em>Recheck<br>what changes.</em></h2><p>Every task should make the next one smarter. Reuse knowledge with the evidence that makes it trustworthy.</p><div class="take-home-symbol" aria-hidden="true"><span>Act</span><b>→</b><span>Validate</span><b>→</b><span>Remember</span></div></div><ol class="take-home-list"><li><span>01</span><div><h3>Remember what you verify</h3><p>Retain verified rules, meanings and experience for later decisions.</p></div></li><li><span>02</span><div><h3>Update with evidence</h3><p>Revise or retire knowledge when its conditions no longer hold.</p></div></li><li><span>03</span><div><h3>Ask when evidence is missing</h3><p>Inspect the data, retrieve context or ask the user.</p></div></li><li><span>04</span><div><h3>Carry knowledge across tasks</h3><p>Connect cleaning, transformation and analysis.</p></div></li><li><span>05</span><div><h3>Verify every step</h3><p>Check how each operation contributes to the intended result.</p></div></li></ol></div></section>
 
     <section class="materials section-shell" id="materials" aria-labelledby="materials-title"><div class="section-caption"><span>04</span><p>Read, present, explore</p></div><div class="materials-heading"><h2 id="materials-title">Take the survey<br><em>with you.</em></h2><p>The complete paper and presentation,<br>in formats ready to read and share.</p></div>
-      <div class="resource-list"><a class="resource-row" href="paper.pdf" target="_blank" rel="noopener"><span class="file-symbol" aria-hidden="true">P</span><div><h3>The survey paper</h3><p>From Knowledge Acquisition to Reliable Decisions</p></div><span class="resource-meta">7 pages · PDF</span><span class="resource-arrow" aria-hidden="true">↗</span></a><a class="resource-row" href="slides.pdf" target="_blank" rel="noopener"><span class="file-symbol" aria-hidden="true">S</span><div><h3>The presentation</h3><p>Examples, method diagrams and take-home messages</p></div><span class="resource-meta">52 slides · PDF</span><span class="resource-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="resource-list"><a class="resource-row" href="paper.pdf" target="_blank" rel="noopener"><span class="file-symbol" aria-hidden="true">P</span><div><h3>The survey paper</h3><p>From Knowledge Acquisition to Reliable Decisions</p></div><span class="resource-meta">7 pages · PDF</span><span class="resource-arrow" aria-hidden="true">↗︎</span></a><a class="resource-row" href="slides.pdf" target="_blank" rel="noopener"><span class="file-symbol" aria-hidden="true">S</span><div><h3>The presentation</h3><p>Examples, method diagrams and take-home messages</p></div><span class="resource-meta">52 slides · PDF</span><span class="resource-arrow" aria-hidden="true">↗︎</span></a></div>
       <div class="citation-area"><div><span class="eyebrow">Cite this survey</span><p>Zhou, Y. (2026). <em>Knowledge-Guided Data Cleaning: From Knowledge Acquisition to Reliable Decisions.</em> Hong Kong Baptist University.</p></div><button class="copy-citation" id="copy-citation">Copy BibTeX <span aria-hidden="true">⧉</span></button><span id="copy-status" class="sr-only" role="status"></span></div>
     </section>
   </main>
-  <footer class="site-footer section-shell"><div><a class="wordmark" href="#"><span class="brand-mark" aria-hidden="true">K<span>·</span></span><span>Knowledge &amp; Data</span></a><p>A survey by <strong>Yixi Zhou</strong><br>Hong Kong Baptist University</p></div><div class="footer-links"><a href="mailto:yxzhou@comp.hkbu.edu.hk">Get in touch ↗</a><a href="https://github.com/XanderZhou2022/Knowledge-Guided-Data-Cleaning" target="_blank" rel="noopener">GitHub repository ↗</a><span>2026 · From evidence to decisions</span></div></footer>
+  <footer class="site-footer section-shell"><div><a class="wordmark" href="#"><span class="brand-mark" aria-hidden="true">K<span>·</span></span><span>Knowledge &amp; Data</span></a><p>A survey by <strong>Yixi Zhou</strong><br>Hong Kong Baptist University</p></div><div class="footer-links"><a href="mailto:yxzhou@comp.hkbu.edu.hk">Get in touch ↗︎</a><a href="https://github.com/XanderZhou2022/Knowledge-Guided-Data-Cleaning" target="_blank" rel="noopener">GitHub repository ↗︎</a><span>2026 · From evidence to decisions</span></div></footer>
 </body>
 </html>

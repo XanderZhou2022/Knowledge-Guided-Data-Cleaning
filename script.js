@@ -34,8 +34,8 @@ function renderStudies(){
     const label=document.createElement('span');label.className='study-category';label.textContent=categoryNames[study.category];
     const description=document.createElement('p');description.textContent=study.summary;
     const links=document.createElement('div');links.className='study-links';
-    const primary=document.createElement('a');primary.href=study.url;primary.target='_blank';primary.rel='noopener';primary.textContent=study.url.startsWith('https:')?'Original publication ↗':'Reference details ↗';
-    const slide=document.createElement('a');slide.href='slides.pdf#page='+study.slide;slide.target='_blank';slide.rel='noopener';slide.textContent='Slide '+study.slide+' ↗';
+    const primary=document.createElement('a');primary.href=study.url;primary.target='_blank';primary.rel='noopener';primary.textContent=study.url.startsWith('https:')?'Original publication ↗︎':'Reference details ↗︎';
+    const slide=document.createElement('a');slide.href='slides.pdf#page='+study.slide;slide.target='_blank';slide.rel='noopener';slide.textContent='Slide '+study.slide+' ↗︎';
     links.append(primary,slide);detail.append(label,description,links);row.append(summary,detail);list.append(row);
   }
   count.textContent=selected.length===0?'No matching studies':(visible.length<selected.length?'Showing '+visible.length+' of '+selected.length+' studies':selected.length+' '+(selected.length===1?'study':'studies')+(category==='all'&&!query?' in the survey':''));
