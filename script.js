@@ -15,6 +15,11 @@ document.querySelectorAll('[data-evidence]').forEach(button=>button.addEventList
 const categoryNames={acquisition:'Knowledge acquisition',repair:'Repair decisions',reliability:'Reliability',preparation:'Data preparation'};
 let studies=[],category='all',expanded=false;
 const list=document.getElementById('study-list'), search=document.getElementById('study-search'), showAll=document.getElementById('show-all'), count=document.getElementById('study-count');
+function appendLinkArrow(link){
+  const ns='http://www.w3.org/2000/svg',icon=document.createElementNS(ns,'svg'),path=document.createElementNS(ns,'path');
+  for(const [name,value] of Object.entries({class:'link-arrow',width:'20',height:'20',viewBox:'0 0 20 20',fill:'none',stroke:'currentColor','stroke-width':'1.8','stroke-linecap':'round','stroke-linejoin':'round','aria-hidden':'true',focusable:'false'}))icon.setAttribute(name,value);
+  path.setAttribute('d','M4 16 16 4M5 4h11v11');icon.append(path);link.append(icon);
+}
 function renderStudies(){
   const query=search.value.trim().toLowerCase();
   const selected=studies.filter(s=>(category==='all'||s.category===category)&&[s.paper,s.knowledge,s.summary,s.venue,String(s.year)].join(' ').toLowerCase().includes(query));
@@ -34,8 +39,9 @@ function renderStudies(){
     const label=document.createElement('span');label.className='study-category';label.textContent=categoryNames[study.category];
     const description=document.createElement('p');description.textContent=study.summary;
     const links=document.createElement('div');links.className='study-links';
-    const primary=document.createElement('a');primary.href=study.url;primary.target='_blank';primary.rel='noopener';primary.textContent=study.url.startsWith('https:')?'Original publication ↗︎':'Reference details ↗︎';
-    const slide=document.createElement('a');slide.href='slides.pdf#page='+study.slide;slide.target='_blank';slide.rel='noopener';slide.textContent='Slide '+study.slide+' ↗︎';
+    const primary=document.createElement('a');primary.href=study.url;primary.target='_blank';primary.rel='noopener';primary.textContent=study.url.startsWith('https:')?'Original publication':'Reference details';
+    const slide=document.createElement('a');slide.href='slides.pdf#page='+study.slide;slide.target='_blank';slide.rel='noopener';slide.textContent='Slide '+study.slide;
+    appendLinkArrow(primary);appendLinkArrow(slide);
     links.append(primary,slide);detail.append(label,description,links);row.append(summary,detail);list.append(row);
   }
   count.textContent=selected.length===0?'No matching studies':(visible.length<selected.length?'Showing '+visible.length+' of '+selected.length+' studies':selected.length+' '+(selected.length===1?'study':'studies')+(category==='all'&&!query?' in the survey':''));
