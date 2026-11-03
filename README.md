@@ -12,6 +12,14 @@ A survey connecting knowledge acquisition with supported data repairs, reliabili
 - [Editable presentation (PowerPoint)](slides.pptx)
 - [Project website](https://xanderzhou2022.github.io/Knowledge-Guided-Data-Cleaning/)
 
+## Speaker scripts and preparation notes
+
+- [English speaker script (Word)](presentation/Knowledge_Guided_Data_Cleaning_English_Script.docx)
+- [Chinese preparation guide (Word)](presentation/Knowledge_Guided_Data_Cleaning_%E4%B8%AD%E6%96%87%E5%A4%87%E8%AF%BE%E8%AF%A6%E8%A7%A3.docx)
+- [All scripts, editable Markdown, and archived drafts](presentation/README.md)
+
+Both Word documents follow the 52-slide presentation. The Chinese guide includes each slide's purpose, spoken script, visual explanation and transitions, plus explanations of the 30 studies, discussion questions and a glossary.
+
 ## Website
 
 The static website includes an interactive running example, a searchable index of all 30 studies, take-home messages, and links to the paper and presentation. It runs without a build step or external dependencies. Comic Relief webfonts are served locally so the typography also works on iPhone Safari; their SIL Open Font License is included in `assets/fonts/`.
@@ -24,7 +32,7 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
-The `gh-pages` branch contains the same website and downloadable materials. Configure GitHub Pages to deploy from **gh-pages / (root)**.
+The `gh-pages` branch serves the project website and its paper and slide downloads. Configure GitHub Pages to deploy from **gh-pages / (root)**.
 
 ## Citation
 
