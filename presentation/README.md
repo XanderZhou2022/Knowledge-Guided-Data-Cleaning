@@ -7,6 +7,8 @@ The scripts follow the 52-slide presentation, **Knowledge-Guided Data Cleaning: 
 - [English speaker script](Knowledge_Guided_Data_Cleaning_English_Script.docx): the latest spoken script, organized by slide, with delivery cues. Research names remain in the headings for navigation.
 - [Chinese preparation guide](Knowledge_Guided_Data_Cleaning_%E4%B8%AD%E6%96%87%E5%A4%87%E8%AF%BE%E8%AF%A6%E8%A7%A3.docx): slide meaning and purpose, a Chinese spoken script, figure walkthroughs, transitions, and explanations of the problem and mechanism behind each study. Includes discussion questions, a glossary, and a reference index.
 
+Text colours distinguish spoken content, transitions, delivery cues, paper explanations, and preparation notes. Each document starts with a colour key.
+
 ## Markdown scripts
 
 - [Latest English script](Knowledge-Guided%20Data%20Cleaning_English_Speaker_Script_Narrative.md): the editable text used for the English Word document.
